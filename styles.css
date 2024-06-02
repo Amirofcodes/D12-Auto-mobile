@@ -182,7 +182,7 @@ body {
   gap: var(--gap-11xl);
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch; /* Ensure the content aligns at the top and bottom */
   justify-content: center;
 }
 
@@ -205,6 +205,12 @@ body {
   max-width: 100%;
   overflow: hidden;
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.img-icon:hover {
+  transform: scale(1.05); /* Scale the image slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
 .more-imgs {
@@ -228,33 +234,42 @@ body {
   max-width: 100%;
   overflow: hidden;
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.img-icon1:hover,
+.img-icon2:hover,
+.img-icon3:hover {
+  transform: scale(1.05); /* Scale the image slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
 .informations1 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-between; /* Ensure the content stretches from top to bottom */
   min-width: 433px;
-  min-height: 620px;
   max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .texts {
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  gap: 22px;
+  gap: 20px;
 }
 
 .toyota-camry {
   margin: 0;
   align-self: stretch;
   position: relative;
-  font-size: inherit;
+  font-size: 28px;
   line-height: 42px;
   text-transform: uppercase;
   font-weight: 400;
@@ -264,19 +279,21 @@ body {
 .toyota-camry-est-container {
   margin: 0;
   align-self: stretch;
-  max-height: 120px;
   position: relative;
   font-size: var(--font-size-base);
-  line-height: 30px;
+  line-height: 1.5;
   font-family: var(--font-abyssinica-sil);
   color: var(--dark-gray);
-  display: inline-block;
 }
 
 .toyota-camry-est,
 .caractristiques-gnrales,
 .moteur-et-transmission {
   display: block;
+  margin: 20px 0 10px;
+  font-weight: bold;
+  font-size: var(--font-size-base); /* Ensure consistent size */
+  font-family: var(--font-adamina); /* Ensure consistent font */
 }
 
 .fabricant-toyota-motor-corpo,
@@ -284,7 +301,7 @@ body {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
-  padding-left: var(--padding-2xl);
+  padding-left: 20px;
 }
 
 .fabricant-toyota,
@@ -307,6 +324,12 @@ body {
   font-size: 12px;
   color: var(--white);
   font-family: var(--font-abel);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bouton:hover {
+  background-color: var(--blue);
 }
 
 .choisir-une-voiture {
@@ -399,6 +422,12 @@ body {
   padding: 0 0 var(--padding-39xl);
   box-sizing: border-box;
   gap: var(--gap-5xs);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.car-card:hover {
+  transform: scale(1.05); /* Scale the image slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
 .car-card1,
@@ -413,6 +442,14 @@ body {
   padding: 0 0 var(--padding-39xl);
   box-sizing: border-box;
   gap: var(--gap-5xs);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.car-card1:hover,
+.car-card2:hover,
+.car-card3:hover {
+  transform: scale(1.05); /* Scale the image slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
 .toyota-camry1,
@@ -455,6 +492,15 @@ body {
   align-self: stretch;
   position: relative;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.img-icon4:hover,
+.img-icon5:hover,
+.img-icon6:hover,
+.img-icon7:hover {
+  transform: scale(1.05); /* Scale the image slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
 /* Footer Styles */
