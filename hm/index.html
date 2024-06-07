@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL:wght@400&display=swap" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Filtres</title>
+  </head>
+  <body>
+    <div class="filter-section">
+      <div class="button" id="button1">
+        <div class="title">
+          <div class="section-title">MARQUES</div>
+          <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section1', 'button1')" />
+        </div>
+      </div>
+      <div class="section-content" id="section1">
+        <div class="title">
+          <div class="section-title">MARQUES</div>
+          <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section1', 'button1')" />
+        </div>
+        <div class="text-section">
+          <div class="option-item" onclick="selectOption(event, this)">Honda</div>
+          <div class="option-item" onclick="selectOption(event, this)">Ford</div>
+          <div class="option-item" onclick="selectOption(event, this)">Bmw</div>
+          <div class="option-item" onclick="selectOption(event, this)">Audi</div>
+          <div class="option-item" onclick="selectOption(event, this)">Toyota</div>
+        </div>
+      </div>
+
+      <div class="button" id="button2">
+        <div class="title">
+          <div class="section-title">MODÉLE</div>
+          <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section2', 'button2')" />
+        </div>
+      </div>
+      <div class="section-content" id="section2">
+        <div class="title">
+          <div class="section-title">MODÉLE</div>
+          <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section2', 'button2')" />
+        </div>
+        <div class="text-section">
+          <div class="option-item" onclick="selectOption(event, this)">Civic</div>
+          <div class="option-item" onclick="selectOption(event, this)">Fiesta</div>
+          <div class="option-item" onclick="selectOption(event, this)">X5</div>
+          <div class="option-item" onclick="selectOption(event, this)">A4</div>
+          <div class="option-item" onclick="selectOption(event, this)">Camry</div>
+        </div>
+      </div>
+
+      <div class="button" id="button3">
+        <div class="title">
+          <div class="section-title">CARBURANT</div>
+          <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section3', 'button3')" />
+        </div>
+      </div>
+      <div class="section-content" id="section3">
+        <div class="title">
+          <div class="section-title">CARBURANT</div>
+          <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section3', 'button3')" />
+        </div>
+        <div class="text-section">
+          <div class="option-item" onclick="selectOption(event, this)">Essence</div>
+          <div class="option-item" onclick="selectOption(event, this)">Gazole</div>
+          <div class="option-item" onclick="selectOption(event, this)">Électrique</div>
+        </div>
+      </div>
+
+      <div class="button" id="buttonPrice">
+        <div class="title">
+          <div class="section-title">PRIX</div>
+          <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('priceRangeSection', 'buttonPrice')" />
+        </div>
+      </div>
+      <div class="section-content" id="priceRangeSection">
+        <div class="title">
+          <div class="section-title">PRIX</div>
+          <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('priceRangeSection', 'buttonPrice')" />
+        </div>
+        <div class="text-section" id="priceRangeTexts">
+          <div class="range-prices">
+            <div class="price-display">
+              <div id="displayedPrice" class="div">10</div>
+              <div class="div1">€</div>
+            </div>
+          </div>
+          <input type="range" id="priceRangeInput" class="price-range-input" min="100" max="50000" value="10" oninput="updateDisplayedPrice()" />
+        </div>
+      </div>
+
+      <div class="button" id="button4">
+        <div class="title">
+          <div class="section-title">Nombre de places</div>
+          <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section4', 'button4')" />
+        </div>
+      </div>
+      <div class="section-content" id="section4">
+        <div class="title">
+          <div class="section-title">Nombre de places</div>
+          <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section4', 'button4')" />
+        </div>
+        <div class="text-section">
+          <div class="select-option" onclick="selectOption(event, this)">
+            <div class="select-box"></div>
+            <div class="option-label">2</div>
+          </div>
+          <div class="select-option" onclick="selectOption(event, this)">
+            <div class="select-box"></div>
+            <div class="option-label">4</div>
+          </div>
+          <div class="select-option" onclick="selectOption(event, this)">
+            <div class="select-box"></div>
+            <div class="option-label">6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button" id="button5">
+        <div class="title">
+          <div class="section-title">Photos</div>
+          <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section5', 'button5')" />
+        </div>
+      </div>
+      <div class="section-content" id="section5">
+        <div class="title">
+          <div class="section-title">Photos</div>
+          <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section5', 'button5')" />
+        </div>
+        <div class="text-section">
+          <div class="select-option" onclick="selectOption(event, this)">
+            <div class="select-box"></div>
+            <div class="option-label">Avec</div>
+          </div>
+          <div class="select-option" onclick="selectOption(event, this)">
+            <div class="select-box"></div>
+            <div class="option-label">Sans</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nouveau filtre pour la sélection de couleur -->
+      <div class="button" id="button6">
+        <div class="title">
+          <div class="section-title">Couleurs</div>
+          <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section6', 'button6')" />
+        </div>
+      </div>
+      <div class="section-content" id="section6">
+        <div class="title">
+          <div class="section-title">Couleurs</div>
+          <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section6', 'button6')" />
+        </div>
+        <div class="text-section">
+          <div class="colors">
+            <div class="color">
+              <div class="circle" data-color="multicolor"></div>
+              <div class="label">Multicolor</div>
+            </div>
+            <div class="color">
+              <div class="circle selected" data-color="gris"></div>
+              <div class="label">Gris</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="blanc"></div>
+              <div class="label">Blanc</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="bleu"></div>
+              <div class="label">Bleu</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="cyan"></div>
+              <div class="label">Cyan</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="jaune"></div>
+              <div class="label">Jaune</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="vert"></div>
+              <div class="label">Vert</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="marron"></div>
+              <div class="label">Marron</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="rouge"></div>
+              <div class="label">Rouge</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="orange"></div>
+              <div class="label">Orange</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="marron-clair"></div>
+              <div class="label">Marron clair</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="bordeaux"></div>
+              <div class="label">Bordeaux</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="creme"></div>
+              <div class="label">Crème</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="beige"></div>
+              <div class="label">Beige</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="fuschia"></div>
+              <div class="label">Fuschia</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="noir"></div>
+              <div class="label">Noir</div>
+            </div>
+            <div class="color">
+              <div class="circle" data-color="rose"></div>
+              <div class="label">Rose</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton de réinitialisation des filtres -->
+      <div class="typereini-button">
+        <div class="text">
+          <img class="icon" alt="" src="./public/icon.svg" />
+          <div class="rinitialiser-les-filtres">réinitialiser les filtres</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
