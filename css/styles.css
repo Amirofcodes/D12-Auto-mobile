@@ -19,7 +19,7 @@ svg {
 body {
   min-width: 320px;
   background-color: var(--white);
-  font-family: "Arial", sans-serif;
+  font-family: "Muller", sans-serif;
   font-size: 14px;
   line-height: 32px;
   color: var(--black);
@@ -49,13 +49,17 @@ body {
 }
 
 .container {
-  max-width: 1441px;
+  max-width: 1309px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
 }
 
+body {
+  margin: 0;
+  line-height: normal;
+}
 
 :root {
   /* Fonts */
@@ -135,7 +139,6 @@ body {
 .icon3,
 .icon2,
 .icon1 {
-  box-sizing: content-box;
   width: 30px;
   height: 30px;
 }
@@ -671,7 +674,7 @@ body {
   position: relative;
   max-width: 100%;
   overflow: hidden;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* Add transition for hover effect */
 }
@@ -938,10 +941,10 @@ body {
   height: 268.8px;
   max-width: 100%;
   overflow: hidden;
+  object-fit: cover;
   align-self: stretch;
   position: relative;
   flex-shrink: 0;
-  object-fit: contain;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* Add transition for hover effect */
 }
@@ -1116,7 +1119,6 @@ body {
 .icon6 {
   height: 30px;
   width: 30px;
-  object-fit: contain;
   position: relative;
   min-height: 30px;
 }
@@ -1755,4 +1757,132 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.hero-section {
+  width: 100%;
+  display: flex;
+  position: relative;
+  background: #9DF2EB;
+  padding: 20px 10px;
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+-- Large choix -->
+.hero-text h1 {
+  color: #121214;
+  font-size: 24px;
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  color: #121214;
+  font-size: 16px;
+  font-family: 'Abyssinica SIL', serif;
+  line-height: 1.5;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  background: #121214;
+  color: white;
+  font-size: 14px;
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+}
+
+.hero-image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.info-section {
+  background: #9DF2EB;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+.info-text {
+  flex: 1;
+}
+
+.info-text h2 {
+  font-size: 24px;
+  color: #121214;
+  font-family: 'Abel', sans-serif;
+}
+
+.info-text p {
+  font-size: 16px;
+  color: #121214;
+  font-family: 'Abyssinica SIL', serif;
+  line-height: 24px;
+}
+
+.info-button {
+  padding: 10px 20px;
+  background: #121214;
+  color: white;
+  font-size: 14px;
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.info-image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.info-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
