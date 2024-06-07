@@ -9,16 +9,13 @@
     <link rel="stylesheet" href="css/media.css" />
 
     <script defer src="js/menu.js"></script>
+    <script defer src="js/filter.js"></script>
   </head>
 
   <body>
     <header class="header">
       <div class="header__container container">
-        <button
-          aria-label="open"
-          class="header__hamburger hamburger hamburger--collapse reset-btn js-burger"
-          type="button"
-        >
+        <button aria-label="open" class="header__hamburger hamburger hamburger--collapse reset-btn js-burger" type="button">
           <span class="hamburger__box">
             <span class="hamburger__inner"></span>
           </span>
@@ -45,29 +42,10 @@
           </div>
           <div>
             <div class="icon-wrap">
-              <button
-                aria-label="open"
-                class="reset-btn header__search-btn js-open-search"
-                type="button"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    width="7.56126"
-                    height="1.89031"
-                    transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
+              <button aria-label="open" class="reset-btn header__search-btn js-open-search" type="button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor" />
+                  <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2" />
                 </svg>
               </button>
               <img class="icon1" alt="Star Icon" src="images/star.png" />
@@ -76,112 +54,278 @@
             </div>
           </div>
           <form action="/" class="header__search-form js-form" method="get">
-            <input
-              type="text"
-              class="header__search-input"
-              placeholder="Qu'est-ce tu cherches?"
-            />
-            <button
-              aria-label="seach"
-              class="reset-bachsearch-btn"
-              type="submit"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  width="7.56126"
-                  height="1.89031"
-                  transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
+            <input type="text" class="header__search-input" placeholder="Qu'est-ce tu cherches?" />
+            <button aria-label="seach" class="reset-bachsearch-btn" type="submit">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor" />
+                <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2" />
               </svg>
             </button>
-            <button
-              aria-label="Close"
-              class="header__close-btn reset-btn js-close-search"
-              type="button"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="8.9541"
-                  y="7.30432"
-                  width="11.6645"
-                  height="2.33291"
-                  transform="rotate(45 8.9541 7.30432)"
-                  fill="currentColor"
-                />
-                <rect
-                  x="7.30469"
-                  y="15.5524"
-                  width="11.6645"
-                  height="2.33291"
-                  transform="rotate(-45 7.30469 15.5524)"
-                  fill="currentColor"
-                />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="11"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
+            <button aria-label="Close" class="header__close-btn reset-btn js-close-search" type="button">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="currentColor" />
+                <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="currentColor" />
+                <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" />
               </svg>
             </button>
           </form>
         </nav>
       </div>
     </header>
-    <section class="hero__section container">
-
-    </section>
+    <section class="hero__section container"></section>
     <section class="filter__section container">
-      <div class="filters">
+      <div class="filter-section">
+        <div class="button" id="button1">
+          <div class="title">
+            <div class="section-title">MARQUES</div>
+            <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section1', 'button1')" />
+          </div>
+        </div>
+        <div class="section-content" id="section1">
+          <div class="title">
+            <div class="section-title">MARQUES</div>
+            <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section1', 'button1')" />
+          </div>
+          <div class="text-section">
+            <div class="option-item" onclick="selectOption(event, this)">Honda</div>
+            <div class="option-item" onclick="selectOption(event, this)">Ford</div>
+            <div class="option-item" onclick="selectOption(event, this)">Bmw</div>
+            <div class="option-item" onclick="selectOption(event, this)">Audi</div>
+            <div class="option-item" onclick="selectOption(event, this)">Toyota</div>
+          </div>
+        </div>
 
+        <div class="button" id="button2">
+          <div class="title">
+            <div class="section-title">MODÉLE</div>
+            <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section2', 'button2')" />
+          </div>
+        </div>
+        <div class="section-content" id="section2">
+          <div class="title">
+            <div class="section-title">MODÉLE</div>
+            <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section2', 'button2')" />
+          </div>
+          <div class="text-section">
+            <div class="option-item" onclick="selectOption(event, this)">Civic</div>
+            <div class="option-item" onclick="selectOption(event, this)">Fiesta</div>
+            <div class="option-item" onclick="selectOption(event, this)">X5</div>
+            <div class="option-item" onclick="selectOption(event, this)">A4</div>
+            <div class="option-item" onclick="selectOption(event, this)">Camry</div>
+          </div>
+        </div>
+
+        <div class="button" id="button3">
+          <div class="title">
+            <div class="section-title">CARBURANT</div>
+            <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section3', 'button3')" />
+          </div>
+        </div>
+        <div class="section-content" id="section3">
+          <div class="title">
+            <div class="section-title">CARBURANT</div>
+            <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section3', 'button3')" />
+          </div>
+          <div class="text-section">
+            <div class="option-item" onclick="selectOption(event, this)">Essence</div>
+            <div class="option-item" onclick="selectOption(event, this)">Gazole</div>
+            <div class="option-item" onclick="selectOption(event, this)">Électrique</div>
+          </div>
+        </div>
+
+        <div class="button" id="buttonPrice">
+          <div class="title">
+            <div class="section-title">PRIX</div>
+            <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('priceRangeSection', 'buttonPrice')" />
+          </div>
+        </div>
+        <div class="section-content" id="priceRangeSection">
+          <div class="title">
+            <div class="section-title">PRIX</div>
+            <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('priceRangeSection', 'buttonPrice')" />
+          </div>
+          <div class="text-section" id="priceRangeTexts">
+            <div class="range-prices">
+              <div class="price-display">
+                <div id="displayedPrice" class="div">10</div>
+                <div class="div1">€</div>
+              </div>
+            </div>
+            <input type="range" id="priceRangeInput" class="price-range-input" min="100" max="50000" value="10" oninput="updateDisplayedPrice()" />
+          </div>
+        </div>
+
+        <div class="button" id="button4">
+          <div class="title">
+            <div class="section-title">Nombre de places</div>
+            <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section4', 'button4')" />
+          </div>
+        </div>
+        <div class="section-content" id="section4">
+          <div class="title">
+            <div class="section-title">Nombre de places</div>
+            <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section4', 'button4')" />
+          </div>
+          <div class="text-section">
+            <div class="select-option" onclick="selectOption(event, this)">
+              <div class="select-box"></div>
+              <div class="option-label">2</div>
+            </div>
+            <div class="select-option" onclick="selectOption(event, this)">
+              <div class="select-box"></div>
+              <div class="option-label">4</div>
+            </div>
+            <div class="select-option" onclick="selectOption(event, this)">
+              <div class="select-box"></div>
+              <div class="option-label">6</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button" id="button5">
+          <div class="title">
+            <div class="section-title">Photos</div>
+            <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section5', 'button5')" />
+          </div>
+        </div>
+        <div class="section-content" id="section5">
+          <div class="title">
+            <div class="section-title">Photos</div>
+            <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section5', 'button5')" />
+          </div>
+          <div class="text-section">
+            <div class="select-option" onclick="selectOption(event, this)">
+              <div class="select-box"></div>
+              <div class="option-label">Avec</div>
+            </div>
+            <div class="select-option" onclick="selectOption(event, this)">
+              <div class="select-box"></div>
+              <div class="option-label">Sans</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nouveau filtre pour la sélection de couleur -->
+        <div class="button" id="button6">
+          <div class="title">
+            <div class="section-title">Couleurs</div>
+            <img class="icon" alt="Icon" src="./public/close.svg" onclick="toggleTexts('section6', 'button6')" />
+          </div>
+        </div>
+        <div class="section-content" id="section6">
+          <div class="title">
+            <div class="section-title">Couleurs</div>
+            <img class="icon" alt="Icon" src="./public/open.svg" onclick="toggleTexts('section6', 'button6')" />
+          </div>
+          <div class="text-section">
+            <div class="colors">
+              <div class="color">
+                <div class="circle" data-color="multicolor"></div>
+                <div class="label">Multicolor</div>
+              </div>
+              <div class="color">
+                <div class="circle selected" data-color="gris"></div>
+                <div class="label">Gris</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="blanc"></div>
+                <div class="label">Blanc</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="bleu"></div>
+                <div class="label">Bleu</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="cyan"></div>
+                <div class="label">Cyan</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="jaune"></div>
+                <div class="label">Jaune</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="vert"></div>
+                <div class="label">Vert</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="marron"></div>
+                <div class="label">Marron</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="rouge"></div>
+                <div class="label">Rouge</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="orange"></div>
+                <div class="label">Orange</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="marron-clair"></div>
+                <div class="label">Marron clair</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="bordeaux"></div>
+                <div class="label">Bordeaux</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="creme"></div>
+                <div class="label">Crème</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="beige"></div>
+                <div class="label">Beige</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="fuschia"></div>
+                <div class="label">Fuschia</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="noir"></div>
+                <div class="label">Noir</div>
+              </div>
+              <div class="color">
+                <div class="circle" data-color="rose"></div>
+                <div class="label">Rose</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bouton de réinitialisation des filtres -->
+        <div class="typereini-button">
+          <div class="text">
+            <img class="icon" alt="" src="./public/icon.svg" />
+            <div class="rinitialiser-les-filtres">réinitialiser les filtres</div>
+          </div>
+        </div>
       </div>
       <div class="cards">
-        
+        <div class="car-card">
+          <div class="toyota-camry1">HONDA</div>
+          <img class="img-icon4" alt="" src="./images/Honda Insight .jpg" />
+          <div class="div">12 000 €</div>
+        </div>
+        <div class="car-card1">
+          <div class="toyota-camry2">Audi TT</div>
+          <img class="img-icon5" alt="" src="./images/Audi-TT.jpg" />
+
+          <div class="div1">12 000 €</div>
+        </div>
+        <div class="car-card2">
+          <div class="toyota-camry3">Lada Niva</div>
+          <img class="img-icon6" alt="" src="./images/Lada-Niva.jpg" />
+
+          <div class="div2">12 000 €</div>
+        </div>
+        <div class="car-card3">
+          <div class="toyota-camry4">Ford Edsel</div>
+          <img class="img-icon7" alt="" src="./images/Ford-Edsel.jpg" />
+
+          <div class="div3">12 000 €</div>
+        </div>
       </div>
     </section>
-    <div class="line-1">
-      <div class="car-card">
-        <div class="toyota-camry1">HONDA</div>
-        <img class="img-icon4" alt="" src="./images/Honda Insight .jpg" />
 
-        <div class="div">12 000 €</div>
-      </div>
-      <div class="car-card1">
-        <div class="toyota-camry2">Audi TT</div>
-        <img class="img-icon5" alt="" src="./images/Audi-TT.jpg" />
-
-        <div class="div1">12 000 €</div>
-      </div>
-      <div class="car-card2">
-        <div class="toyota-camry3">Lada Niva</div>
-        <img class="img-icon6" alt="" src="./images/Lada-Niva.jpg" />
-
-        <div class="div2">12 000 €</div>
-      </div>
-      <div class="car-card3">
-        <div class="toyota-camry4">Ford Edsel</div>
-        <img class="img-icon7" alt="" src="./images/Ford-Edsel.jpg" />
-
-        <div class="div3">12 000 €</div>
-      </div>
-    </div>
     <footer class="footer">
       <div class="links">
         <div class="nav__link">
@@ -201,9 +345,7 @@
           </div>
         </div>
         <div class="contacts">
-          <a href="mailto:info@xwear.info" class="infoxwearinfo"
-            >info@xwear.info</a
-          >
+          <a href="mailto:info@xwear.info" class="infoxwearinfo">info@xwear.info</a>
           <a href="tel:+33026083885" class="div4">+33 02 608 38 85</a>
         </div>
         <div class="newsletter">
@@ -222,9 +364,7 @@
       </div>
       <div class="link-wrapper">
         <div class="link">
-          <a href="#" class="politique-de-confidentialit"
-            >politique de confidentialité</a
-          >
+          <a href="#" class="politique-de-confidentialit">politique de confidentialité</a>
         </div>
       </div>
     </footer>
