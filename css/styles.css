@@ -19,7 +19,7 @@ svg {
 body {
   min-width: 320px;
   background-color: var(--white);
-  font-family: "Muller", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 32px;
   color: var(--black);
@@ -49,17 +49,13 @@ body {
 }
 
 .container {
-  max-width: 1309px;
+  max-width: 1441px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-body {
-  margin: 0;
-  line-height: normal;
-}
 
 :root {
   /* Fonts */
