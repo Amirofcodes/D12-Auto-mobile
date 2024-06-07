@@ -1759,12 +1759,15 @@ body {
   gap: 10px;
 }
 
-.hero-section {
+.hero__section {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
   position: relative;
-  background: #9DF2EB;
-  padding: 20px 10px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1)), url(../images/Hero.webp);
+  padding: 40px 10px;
 }
 
 .hero-content {
@@ -1774,17 +1777,19 @@ body {
   align-items: center;
   gap: 20px;
   text-align: center;
+  margin-bottom: 50px;
 }
--- Large choix -->
+
+/*Large choix*/
 .hero-text h1 {
-  color: #121214;
+  color: var(--black);
   font-size: 24px;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Arial', sans-serif;
   text-transform: uppercase;
 }
 
 .hero-text p {
-  color: #121214;
+  color: var(--black);
   font-size: 16px;
   font-family: 'Abyssinica SIL', serif;
   line-height: 1.5;
@@ -1795,10 +1800,15 @@ body {
   background: #121214;
   color: white;
   font-size: 14px;
+  margin-bottom: 20px;
   font-family: 'Abel', sans-serif;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+}
+
+.hero-button:hover {
+background-color: var(--blue);
 }
 
 .hero-carousel {
@@ -1808,7 +1818,7 @@ body {
 }
 
 .carousel-button {
-  width: 40px;
+  width: 30px;
   height: 40px;
   background: white;
   border: none;
@@ -1832,6 +1842,7 @@ body {
 .info-section {
   background: #9DF2EB;
   padding: 50px 20px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1873,6 +1884,10 @@ body {
   border: none;
   cursor: pointer;
   
+}
+
+.info-button:hover {
+  background-color: var(--blue);
 }
 
 .info-image-container {
