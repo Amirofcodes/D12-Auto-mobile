@@ -571,6 +571,42 @@ body {
 }
 
 
+
+/*Hero*/
+
+/*Filter*/
+
+.filter__section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 20px 50px;
+  gap: 20px
+}
+
+
+@media (max-width: 1024px) {
+  
+.filter__section {
+flex-direction: column;
+}
+
+.cards {
+  grid-template-columns: 1fr;
+  grid-template-rows: none;
+  padding: 20px 50px;
+  gap: 20px
+}
+
+
+}
 /* Content Styles */
 .content-wrapper {
   align-self: stretch;
