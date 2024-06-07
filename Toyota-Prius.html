@@ -6,7 +6,8 @@
   <meta name="viewport" content="initial-scale=1, width=device-width">
 
 
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abyssinica SIL:wght@400&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Adamina:wght@400&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
@@ -16,34 +17,69 @@
 </head>
 
 <body>
-
+  <header class="header">
+    <div class="header__container container">
+      <button aria-label="Раскрытие меню" class="header__hamburger hamburger hamburger--collapse reset-btn js-burger"
+        type="button">
+        <span class="hamburger__box">
+          <span class="hamburger__inner"></span>
+        </span>
+      </button>
+      <a class="header__logo">
+        <img src="images/logo.png" alt="logo">
+      </a>
+      <nav class="header__navigetion">
+        <div class="header__menu-wrap js-menu-wrap">
+          <ul class="reset-list header__menu">
+            <li class="header__menu-item"><a href="#" class="header__menu-link">Choisir une voiture</a></li>
+            <li class="header__menu-item"><a href="#" class="header__menu-link">Livraison</a></li>
+            <li class="header__menu-item"><a href="#" class="header__menu-link">A propos de nous</a></li>
+            <li class="header__menu-item"><a href="#" class="header__menu-link">information</a></li>
+  
+          </ul>
+        </div>
+        <div>
+          <div class="icon-wrap">
+          <button aria-label="Открыть поиск" class="reset-btn header__search-btn  js-open-search" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="7.56126" height="1.89031"
+                transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor" />
+              <path
+                d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+                stroke="currentColor" stroke-width="2" />
+            </svg>
+          </button>
+          <img class="icon1" alt="Star Icon" src="images/star.png">
+          <img class="icon2" alt="User Icon" src="images/user.png">
+          <img class="icon3" alt="Bag Icon" src="images/bag.png">
+        </div>
+        </div>
+        <form action="/" class="header__search-form js-form" method="get">
+          <input type="text" class="header__search-input" placeholder="Qu'est-ce tu cherches?">
+          <button aria-label="поиск" class="reset-btn header__search-btn--submit  header__search-btn" type="submit">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="7.56126" height="1.89031"
+                transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor" />
+              <path
+                d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+                stroke="currentColor" stroke-width="2" />
+            </svg>
+          </button>
+          <button aria-label="Close" class="header__close-btn reset-btn js-close-search" type="button">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)"
+                fill="currentColor" />
+              <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)"
+                fill="currentColor" />
+              <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </button>
+        </form>
+      </nav>
+    </div>
+  </header>
   <div class="page-detail">
-    <header class="header">
-      <img class="logo-icon" loading="lazy" alt="" src="images/logo.png">
-
-      <div class="navigation-wrapper">
-        <div class="navigation">
-          <a class="marque">Choisir une voiture</a>
-          <a class="livraison">Livraison</a>
-          <a class="a-propos-de-container">
-            <span class="span">à </span>propos de nous
-          </a>
-          <a class="informations">informations</a>
-        </div>
-      </div>
-      <div class="icons-wrapper">
-        <div class="icons">
-          <img class="icon" loading="lazy" alt="" src="images/search.svg">
-
-          <img class="icon1" alt="" src="images/star.png">
-
-          <img class="icon2" alt="" src="images/user.png">
-
-          <img class="icon3" alt="" src="images/bag.png">
-
-        </div>
-      </div>
-    </header>
+    
     <section class="content-wrapper">
       <div class="content">
         <div class="imgs">
@@ -121,59 +157,53 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="links">
-        <div class="marques">
-          <div class="marques1">Marques</div>
-          <div class="toyota">Toyota</div>
-          <div class="ford">Ford</div>
-          <div class="bmw">BMW</div>
-          <div class="audi">Audi</div>
-        </div>
-        <div class="modle">
-          <div class="title">Modèles</div>
-          <div class="corolla">Corolla</div>
-          <div class="camry">Camry</div>
-          <div class="fiesta">Fiesta</div>
-          <div class="accord">Accord</div>
-        </div>
-        <div class="contacts">
-          <div class="contacts1">contacts</div>
-          <u class="infoxwearinfo">info@xwear.info</u>
-          <div class="div4">+33 02 608 38 85</div>
-          <div class="icons1">
-            <img class="icon5" alt="" src="./public/icon-5.svg">
+  </div>
+  <footer class="footer">
+    <div class="links">
+      <div class="nav__link">
+      <div class="marques">
+        <div class="marques1">Marques</div>
+        <a href="#" class="toyota">Toyota</a>
+        <a href="#" class="ford">Ford</a>
+        <a href="#" class="bmw">BMW</a>
+        <a href="#" class="audi">Audi</a>
+      </div>
+      <div class="modle">
+        <a href="#" class="title">Modèles</a>
+        <a href="#" class="corolla">Corolla</a>
+        <a href="#" class="camry">Camry</a>
+        <a href="#" class="fiesta">Fiesta</a>
+        <a href="#" class="accord">Accord</a>
+      </div>
 
-            <img class="icon6" alt="" src="./public/icon-6.svg">
+    </div>
+      <div class="contacts">
+        <a href="mailto:info@xwear.info" class="infoxwearinfo">info@xwear.info</a>
+        <a href="tel:+33026083885" class="div4">+33 02 608 38 85</a>
+      </div>
+      <div class="newsletter">
+        <div class="abonnez-vous-la">Abonnez-vous à la newsletter</div>
+        <div class="email-field">
+          <div class="field-wrapper">
+            <div class="field">
+              <input class="email" placeholder="email" type="text">
 
-          </div>
-        </div>
-        <div class="newsletter">
-          <div class="abonnez-vous-la">Abonnez-vous à la newsletter</div>
-          <div class="email-field">
-            <div class="field-wrapper">
-              <div class="field">
-                <input class="email" placeholder="email" type="text">
-
-                <div class="underline1">
-                </div>
+              <div class="underline1">
               </div>
             </div>
-            <div class="button">
-              <img class="icon7" alt="" src="./public/icon-7@2x.png">
+          </div>
+          <button class="button">Abonner</button> 
+         
 
-            </div>
           </div>
         </div>
       </div>
-      <div class="link-wrapper">
-        <div class="link">
-          <u class="politique-de-confidentialit">politique de confidentialité</u>
-        </div>
+    <div class="link-wrapper">
+      <div class="link">
+        <a href="#" class="politique-de-confidentialit">politique de confidentialité</a>
       </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
 
 
 
